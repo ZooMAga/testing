@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja Strona Główna</title>
+    <title>Moja Strona z Mglistym Menu</title>
     <style>
         * {
             margin: 0;
@@ -11,49 +11,61 @@
             box-sizing: border-box;
         }
 
-        /* Ustawienie obrazu jako pełnoekranowego tła */
+        /* Pełnoekranowe tło z obrazem */
         body, html {
             height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f5f5f5;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Kontener, który utrzymuje obraz w centrum strony */
-        .container {
-            width: 100vw;
-            height: 100vh;
-            background-image: url('https://github.com/ZooMAga/myweb/blob/main/Leonardo_Lightning_XL_Design_a_simple_symbolic_and_geometric_w_3.jpg?raw=true');
+            background-image: url('https://github.com/ZooMAga/myweb/blob/main/Sticky%20Layout%201A.png?raw=true');
             background-size: cover;
             background-position: center;
-            position: relative;
+            font-family: Arial, sans-serif;
+            color: #fff;
+            overflow: hidden;
         }
 
-        /* Przykładowe nakładki na obraz – na przykład dla przycisków lub linków */
-        .overlay-button {
+        /* Centralne, pionowe menu */
+        .menu {
             position: absolute;
-            bottom: 20%;
-            left: 15%;
-            padding: 15px 30px;
-            background-color: rgba(255, 133, 13, 0.8); /* Przezroczysty przycisk */
-            color: #ffffff;
+            top: 50%;
+            left: 10%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 1.2em;
             font-weight: bold;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
 
-        .overlay-button:hover {
-            background-color: rgba(229, 116, 12, 0.8);
+        /* Stylizacja linków w menu */
+        .menu a {
+            color: #ffffff;
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid transparent;
+            background-color: rgba(255, 255, 255, 0.1); /* Mgiełka z 10% przezroczystości */
+            border-radius: 5px;
+            opacity: 0.1; /* Ukrycie mgiełki na starcie */
+            transition: opacity 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+
+        /* Efekt na hover */
+        .menu a:hover {
+            opacity: 1; /* Zwiększenie widoczności */
+            color: #ff850d; /* Pomarańczowy kolor tekstu na hover */
+            border-color: #ff850d; /* Pomarańczowa obwódka */
+            background-color: rgba(255, 255, 255, 0.2); /* Wzmocniona mgiełka na hover */
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <!-- Dodajemy przezroczysty przycisk na obrazie -->
-        <a href="#more" class="overlay-button">Dowiedz się więcej</a>
+    <div class="menu">
+        <a href="#home">HOME</a>
+        <a href="#contact">CONTACT</a>
+        <a href="#about">ABOUT US</a>
+        <a href="#services">SERVICES</a>
+        <a href="#offer">OFFER</a>
     </div>
 </body>
 </html>
