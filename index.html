@@ -11,7 +11,7 @@
             box-sizing: border-box;
         }
 
-        /* Pełnoekranowe tło z dopasowanym obrazem */
+        /* Pełnoekranowe tło z obrazem widocznym w całości */
         body, html {
             height: 100%;
             display: flex;
@@ -19,9 +19,9 @@
             justify-content: center;
             background-color: #333; /* Kolor tła wokół obrazu */
             background-image: url('https://github.com/ZooMAga/myweb/blob/main/Sticky%20Layout%201A.png?raw=true');
-            background-size: contain; /* Obraz widoczny w całości, bez rozciągania */
-            background-repeat: no-repeat;
+            background-size: auto; /* Brak rozciągania */
             background-position: center;
+            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             color: #fff;
             overflow: hidden;
@@ -71,3 +71,4 @@
     </div>
 </body>
 </html>
+
