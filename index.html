@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moja Strona Główna</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ustawienie obrazu jako pełnoekranowego tła */
+        body, html {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Kontener, który utrzymuje obraz w centrum strony */
+        .container {
+            width: 100vw;
+            height: 100vh;
+            background-image: url('https://github.com/ZooMAga/myweb/blob/main/Leonardo_Lightning_XL_Design_a_simple_symbolic_and_geometric_w_3.jpg?raw=true');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Przykładowe nakładki na obraz – na przykład dla przycisków lub linków */
+        .overlay-button {
+            position: absolute;
+            bottom: 20%;
+            left: 15%;
+            padding: 15px 30px;
+            background-color: rgba(255, 133, 13, 0.8); /* Przezroczysty przycisk */
+            color: #ffffff;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .overlay-button:hover {
+            background-color: rgba(229, 116, 12, 0.8);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Dodajemy przezroczysty przycisk na obrazie -->
+        <a href="#more" class="overlay-button">Dowiedz się więcej</a>
+    </div>
+</body>
+</html>
